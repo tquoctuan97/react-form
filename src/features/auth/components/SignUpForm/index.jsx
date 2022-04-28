@@ -21,7 +21,7 @@ function SignUpForm(props) {
     .object({
       firstName: yup.string().trim().required('First Name is required'),
       lastName: yup.string().trim().required('Last Name is required'),
-      hobby: yup.string().required('Hooby is required'),
+      hobby: yup.string().required('Hobby is required'),
       gender: yup.string().required('Gender is required'),
       email: yup
         .string()
@@ -52,17 +52,17 @@ function SignUpForm(props) {
     .required();
 
   const form = useForm({
-    // defaultValues: {
-    //   firstName: '',
-    //   lastName: '',
-    //   hobby: '',
-    //   gender: '',
-    //   email: '',
-    //   phoneNumber: '',
-    //   password: '',
-    //   confirmPassword: '',
-    // },
-    // resolver: yupResolver(schema),
+    defaultValues: {
+      firstName: '',
+      lastName: '',
+      hobby: '',
+      gender: '',
+      email: '',
+      phoneNumber: '',
+      password: '',
+      confirmPassword: '',
+    },
+    resolver: yupResolver(schema),
   });
 
   const handleSubmit = (values) => {
